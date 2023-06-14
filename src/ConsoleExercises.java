@@ -33,6 +33,46 @@ public class ConsoleExercises {
 
         // Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
 
+        // do you capture all the words? ***Only the first word was captured when using the .next() method.
+        //*** When using the .nextLine method it was all stored in my variable userString
+
+        Scanner myScanner = new Scanner(System.in);
+        System.out.print("Please enter a sentence: ");
+        String userString = myScanner.nextLine();
+        System.out.println("userString = " + userString);
+
+        // Prompt the user to enter values of length and width of a classroom at Codeup (or your room if virtual).
+
+//        Scanner thisScanner = new Scanner(System.in);
+//
+//        System.out.print("Enter the rounded length of the classroom in feet: ");
+//        String lengthInput = thisScanner.nextLine();
+//        int length = Integer.parseInt(lengthInput);
+//
+//        System.out.print("Enter the rounded width of the classroom in feet: ");
+//        String widthInput = thisScanner.nextLine();
+//        int width = Integer.parseInt(widthInput);
+//
+//        System.out.println("Length: " + length + " feet");
+//        System.out.println("Width: " + width + " feet");
+//        System.out.println("Area of room = " + (length * width) + " square feet.");
+//        System.out.println("perimeter of room = " + (length * 2 + width * 2) + " feet");
+
+
+        Scanner thisScanner = new Scanner(System.in);
+
+        System.out.print("Enter the rounded length of the classroom in feet: ");
+        String lengthInput = thisScanner.nextLine();
+        int length = Integer.parseInt(lengthInput);
+
+        System.out.print("Enter the rounded width of the classroom in feet: ");
+        String widthInput = thisScanner.nextLine();
+        int width = Integer.parseInt(widthInput);
+
+        System.out.println("Length: " + length + " feet");
+        System.out.println("Width: " + width + " feet");
+        System.out.println("Area of room = " + (length * width) + " square feet.");
+        System.out.println("perimeter of room = " + (length * 2 + width * 2) + " feet");
 
 
 
@@ -40,7 +80,8 @@ public class ConsoleExercises {
 
 
 
-            }
+
+    }
         }
 
 
