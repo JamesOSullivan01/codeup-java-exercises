@@ -19,7 +19,7 @@ public class HelloWorld {
 //            String myString = 3.14159;
 //            System.out.println("myString = " + myString);
 
-            //Declare an long variable named myNumber, but do not assign anything to it. Next try to print out myNumber to the console. What happens?
+            //Declare a long variable named myNumber, but do not assign anything to it. Next try to print out myNumber to the console. What happens?
 
             // I get an error saying that myNumber has not been initialized
 //            long myNumber;
@@ -35,6 +35,7 @@ public class HelloWorld {
             // It ran without error but it did not print the "L" at the end
 //            long myNumber = 123L;
 //            System.out.println("myNumber = " + myNumber);
+            // after walkthrough what is actually happening is the L is actually a suffix
 
 // Change your code to assign the value 123 to myNumber.
 // It ran as intended
@@ -88,10 +89,10 @@ public class HelloWorld {
 
 //            Rewrite the following expressions using the relevant shorthand assignment operators:
 
-            int x = 4;
-            // x = x + 5
-            x += 5;
-            System.out.println("x = " + x);
+//            int x = 4;
+//            // x = x + 5
+//            x += 5;
+//            System.out.println("x = " + x);
 
 //            int x = 3;
 //            int y = 4;
@@ -99,12 +100,12 @@ public class HelloWorld {
 //            y *= x;
 //            System.out.println("y = " + y);
 
-//            int x = 10;
-//            int y = 2;
+            int x = 10;
+            int y = 2;
 //            x /= y;
-//            y -= x;
-//            System.out.println("x = " + x);
-//            System.out.println("y = " + y);
+            y -= x;
+            System.out.println("x = " + x);
+            System.out.println("y = " + y);
 
 //            What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold? What happens if you increment a numeric variable past the type's capacity?
 //
