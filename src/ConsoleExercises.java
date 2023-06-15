@@ -4,8 +4,10 @@ import java.util.Scanner;
 public class ConsoleExercises {
     public static void main(String[] args) {
 
+        // **  I did not need to reestablish a new scanner everytime. **
+
         double pi = 3.14159;
-        System.out.format("The value of pi is %s%n", pi);
+        System.out.format("The value of pi is %.2f%n", pi);
 
 /// Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
 
@@ -73,6 +75,8 @@ public class ConsoleExercises {
         System.out.println("Width: " + width + " feet");
         System.out.println("Area of room = " + (length * width) + " square feet.");
         System.out.println("perimeter of room = " + (length * 2 + width * 2) + " feet");
+
+
 
 
 
