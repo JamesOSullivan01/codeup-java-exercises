@@ -50,6 +50,49 @@ public class MethodsExercises {
         return userInt;
     }
 
+//    Calculate the factorial of a number.
+//
+//    Prompt the user to enter an integer from 1 to 10.
+//    Display the factorial of the number entered by the user.
+//    Ask if the user wants to continue.
+//    Use a for loop to calculate the factorial.
+//    Assume that the user will enter an integer, but verify it’s between 1 and 10.
+//    Use the long type to store the factorial.
+//    Continue only if the user agrees to.
+//    A factorial is a number multiplied by each of the numbers before it.
+//    Factorials are denoted by the exclamation point (n!).
+
+
+    public static long factorial() {
+        long factorial = 1;
+        boolean continueFlag = true;
+
+        do {
+            System.out.println("Please enter a number between 1 and 10:");
+            int userInt = scanner.nextInt();
+
+            if (userInt >= 1 && userInt <= 10) {
+                for (int i = 1; i <= userInt; i++) {
+                    factorial *= i;
+                }
+
+                System.out.println("The factorial of " + userInt + " is: " + factorial);
+            } else {
+                System.out.println("Invalid number entered. Please try again.");
+            }
+
+            System.out.println("Do you want to continue? (yes/no)");
+            String choice = scanner.next();
+
+            if (!choice.equalsIgnoreCase("yes")) {
+                continueFlag = false;
+            }
+        } while (continueFlag);
+
+        return factorial;
+    }
+
+
 
 
 
@@ -64,5 +107,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
 
         System.out.println("You entered: " + userInput);
+
+        factorial();
     }
 }
