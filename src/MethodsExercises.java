@@ -92,7 +92,77 @@ public class MethodsExercises {
         return factorial;
     }
 
+    //Create an application that simulates dice rolling.
+    //
+    //Ask the user to enter the number of sides for a pair of dice.
+    //Prompt the user to roll the dice.
+    //"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+    //Use static methods to implement the method(s) that generate the random numbers.
+    //Use the .random method of the java.lang.Math class to generate random numbers.
 
+
+    public static void diceRoll() {
+        boolean continueFlag = true;
+        while (continueFlag) {
+            System.out.println("How many sides does your first die have?");
+            int die1 = scanner.nextInt();
+            System.out.println("How many sides does your second die have?");
+            int die2 = scanner.nextInt();
+
+            scanner.nextLine();
+
+            int roll1 = (int) (Math.random() * die1 + 1);
+            int roll2 = (int) (Math.random() * die2 + 1);
+            int sum = roll1 + roll2;
+
+            System.out.println("Roll dice: total = " + sum);
+
+            System.out.println("Would you like to roll again? (yes/no)");
+            String choice = scanner.nextLine();
+
+            if (!choice.equalsIgnoreCase("yes")) {
+                continueFlag = false;
+            }
+        }
+    }
+
+
+//    You are going to build a high-low guessing game. Create a class named HighLow inside of src.
+//
+//    The specs for the game are:
+//
+//    Game picks a random number between 1 and 100.
+//    Prompts user to guess the number.
+//    All user inputs are validated.
+//    If user's guess is less than the number, it outputs "HIGHER".
+//    If user's guess is more than the number, it outputs "LOWER".
+//    If a user guesses the number, the game should declare "GOOD GUESS!"
+//    Hints
+//
+//    Use the random method of the java.lang.Math class to generate a random number.
+
+
+    public static void guessingGame() {
+        int randomNumber = (int) (Math.random() * 100 + 1);
+
+        System.out.println("Please pick a number between 1 and 100.");
+
+        boolean guessedCorrectly = false;
+
+        do {
+            int userInput = scanner.nextInt();
+
+            if (userInput < randomNumber) {
+                System.out.println("Your number is too low, guess again.");
+            } else if (userInput > randomNumber) {
+                System.out.println("Your number is too high, guess again.");
+            } else {
+                System.out.println("Congratulations, you won!");
+                guessedCorrectly = true;
+            }
+
+        } while (!guessedCorrectly);
+    }
 
 
 
@@ -109,5 +179,7 @@ public class MethodsExercises {
         System.out.println("You entered: " + userInput);
 
         factorial();
+        diceRoll();
+        guessingGame();
     }
 }
