@@ -4,38 +4,32 @@ public class MethodsExercises {
     public static Scanner scanner = new Scanner(System.in);
 
     // Create four separate methods. Each will perform an arithmetic operation:
-    public static int addThis (int n1, int n2) {
-        int result;
-        result = n1 + n2;
+    public static int addThis(int n1, int n2) {
+        int result = n1 + n2;
         return result;
     }
 
-    public static int subtractThis (int n1, int n2) {
-        int result;
-        result = n1 - n2;
+    public static int subtractThis(int n1, int n2) {
+        int result = n1 - n2;
         return result;
     }
 
-    public static int multiplyThis (int n1, int n2) {
-        int result;
-        result = n1 * n2;
+    public static int multiplyThis(int n1, int n2) {
+        int result = n1 * n2;
         return result;
     }
 
-    public static int divideThis (int n1, int n2) {
-        int result;
-        result = n1 / n2;
+    public static int divideThis(int n1, int n2) {
+        int result = n1 / n2;
         return result;
     }
 
-    public static int remainderOf (int n1, int n2) {
-        int result;
-        result = n1 % n2;
+    public static int remainderOf(int n1, int n2) {
+        int result = n1 % n2;
         return result;
     }
 
     // Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
-
     public static int getInteger(int min, int max) {
         int userInt;
         do {
@@ -50,19 +44,7 @@ public class MethodsExercises {
         return userInt;
     }
 
-//    Calculate the factorial of a number.
-//
-//    Prompt the user to enter an integer from 1 to 10.
-//    Display the factorial of the number entered by the user.
-//    Ask if the user wants to continue.
-//    Use a for loop to calculate the factorial.
-//    Assume that the user will enter an integer, but verify it’s between 1 and 10.
-//    Use the long type to store the factorial.
-//    Continue only if the user agrees to.
-//    A factorial is a number multiplied by each of the numbers before it.
-//    Factorials are denoted by the exclamation point (n!).
-
-
+    // Calculate the factorial of a number.
     public static long factorial() {
         long factorial = 1;
         boolean continueFlag = true;
@@ -92,15 +74,7 @@ public class MethodsExercises {
         return factorial;
     }
 
-    //Create an application that simulates dice rolling.
-    //
-    //Ask the user to enter the number of sides for a pair of dice.
-    //Prompt the user to roll the dice.
-    //"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
-    //Use static methods to implement the method(s) that generate the random numbers.
-    //Use the .random method of the java.lang.Math class to generate random numbers.
-
-
+    // Create an application that simulates dice rolling.
     public static void diceRoll() {
         boolean continueFlag = true;
         while (continueFlag) {
@@ -126,22 +100,7 @@ public class MethodsExercises {
         }
     }
 
-
-//    You are going to build a high-low guessing game. Create a class named HighLow inside of src.
-//
-//    The specs for the game are:
-//
-//    Game picks a random number between 1 and 100.
-//    Prompts user to guess the number.
-//    All user inputs are validated.
-//    If user's guess is less than the number, it outputs "HIGHER".
-//    If user's guess is more than the number, it outputs "LOWER".
-//    If a user guesses the number, the game should declare "GOOD GUESS!"
-//    Hints
-//
-//    Use the random method of the java.lang.Math class to generate a random number.
-
-
+    // You are going to build a high-low guessing game.
     public static void guessingGame() {
         int randomNumber = (int) (Math.random() * 100 + 1);
 
@@ -164,15 +123,12 @@ public class MethodsExercises {
         } while (!guessedCorrectly);
     }
 
-
-
     public static void main(String[] args) {
         System.out.println("addThis(2,4) = " + addThis(2, 4));
         System.out.println("subtractThis(20,13) = " + subtractThis(20, 13));
         System.out.println("multiplyThis(3,4) = " + multiplyThis(3, 4));
         System.out.println("divideThis(12,3) = " + divideThis(12, 3));
         System.out.println("remainderOf(40,3) = " + remainderOf(40, 9));
-
 
         int userInput = getInteger(1, 10);
 
