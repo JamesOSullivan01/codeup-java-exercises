@@ -92,6 +92,41 @@ public class MethodsExercises {
         return factorial;
     }
 
+    //Create an application that simulates dice rolling.
+    //
+    //Ask the user to enter the number of sides for a pair of dice.
+    //Prompt the user to roll the dice.
+    //"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+    //Use static methods to implement the method(s) that generate the random numbers.
+    //Use the .random method of the java.lang.Math class to generate random numbers.
+
+
+    public static long diceRoll () {
+        Boolean continueFlag = true;
+        do {
+            System.out.println("How many sides does your first die have?");
+            int die1 = scanner.nextInt();
+            System.out.println("How many sides does your second die have?");
+            int die2 = scanner.nextInt();
+
+            scanner.nextLine();
+
+            int roll1=(int)(Math.random()*die1 +1);
+            int roll2=(int)(Math.random()*die2 +1);
+            int sum = roll1 + roll2;
+
+            System.out.println("Roll dice: total = " + sum);
+
+            System.out.println("Would you like to roll again? (yes/no)");
+            String choice = scanner.nextLine();
+
+            if(!choice.equalsIgnoreCase("yes")) {
+                continueFlag = false;
+            }
+
+        } while (continueFlag);
+        return diceRoll();
+    }
 
 
 
@@ -109,5 +144,6 @@ public class MethodsExercises {
         System.out.println("You entered: " + userInput);
 
         factorial();
+        diceRoll();
     }
 }
