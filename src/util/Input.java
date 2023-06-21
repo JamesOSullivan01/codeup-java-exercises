@@ -31,7 +31,7 @@ public class Input {
     }
 
     public int getInt() {
-        return getInt();
+        return this.scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -43,17 +43,20 @@ public class Input {
         return num;
     }
 
-    public static double getDouble() {
-        return getDouble();
+    public double getDouble() {
+        return this.scanner.nextDouble();
     }
 
-    public class InputTest {
-        public static void main(String[] args) {
-            Input newInput = new Input();
-            newInput.getInt(1, 100);
-            newInput.getDouble(1,100);
 
-        }
+    public static void main(String[] args) {
+        Input newInput = new Input();
+        System.out.println(newInput.getInt(1, 100));
+
+        System.out.println(newInput.getDouble(1, 100));
+        System.out.println(newInput.getDouble());
+
+
     }
 }
+
 

@@ -8,6 +8,12 @@ public class CircleApp {
         Input input = new Input();
 
 
+        System.out.println("What is the radius of your circle?");
+        double userInput = input.getDouble();
+
+        Circle circle = new Circle(userInput);
+        System.out.printf("Circle Area: %f, Circle circumference %f", circle.getArea(), circle.getCircumference());
+
 
     }
 
