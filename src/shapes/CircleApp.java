@@ -12,7 +12,7 @@ public class CircleApp {
         double userInput = input.getDouble();
 
         Circle circle = new Circle(userInput);
-        System.out.printf("Circle Area: %f, Circle circumference %f", circle.getArea(), circle.getCircumference());
+        System.out.printf("Circle Area: %.4f, Circle circumference %.4f", circle.getArea(), circle.getCircumference());
 
 
     }
