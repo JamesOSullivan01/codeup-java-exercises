@@ -1,6 +1,6 @@
 package movies;
 
-public class movie {
+public class Movie {
 
     private String name;
     private String category;
@@ -21,7 +21,7 @@ public class movie {
         this.category = category;
     }
 
-    public movie(String name, String category) {
+    public Movie(String name, String category) {
         this.name = name;
         this.category = category;
     }
