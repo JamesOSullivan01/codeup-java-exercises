@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class MoviesApplication {
 
+    public static Movie[] addMovie(Movie[] movie, Movie newMovie) {
+        Movie[] newMovieArray = Arrays.copyOf(movie, movie.length + 1);
+        newMovieArray[movie.length] = newMovie;
+        return newMovieArray;
+    }
+
 
     public static void main(String[] args) {
         MoviesArray movies = new MoviesArray();
@@ -58,6 +64,20 @@ public class MoviesApplication {
             }
         }
 
+        System.out.println("Would you like to add a movie? (yes/no)");
+        String addMovieYesOrNo = scanner.next();
 
+        if (addMovieYesOrNo.equalsIgnoreCase("yes")) {
+            System.out.println("What is the name of the movie you would like to add?");
+            String newMovieName = scanner.next();
+
+            Movie newMovie = new Movie(newMovieName, "Unknown");
+            Movie[] updatedMovies = addMovie(movies.findAll(), newMovie);
+
+            System.out.println("Updated movie list:");
+            for (Movie movie : updatedMovies) {
+                System.out.println(movie.getName() + " - " + movie.getCategory());
+            }
+        }
     }
 }

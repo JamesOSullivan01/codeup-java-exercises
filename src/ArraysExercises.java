@@ -30,15 +30,6 @@ public class ArraysExercises {
 
         persons = addPerson(persons, newPerson);
 
-
-
-
-
-
-
-
-
-
         // Using enhanced for loop to iterate through persons array.
         for (Person person : persons) {
             // accessing the current person object and calling the 'getname()' method from my person class and returning ir as a string.
