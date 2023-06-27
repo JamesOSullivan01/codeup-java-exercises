@@ -11,10 +11,12 @@ public class Rectangle {
     }
 
     public int getPerimeter() {
+        System.out.println("Square method was used");
         return (2 * length) + (2 * width);
     }
 
     public int getArea() {
+        System.out.println("Square method was used");
         return length * width;
     }
 }

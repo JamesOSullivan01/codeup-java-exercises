@@ -5,12 +5,13 @@ public class Square extends Rectangle {
         super(width, width);
     }
 
+    //Overridden methods using same name and parameters
     public int getPerimeter() {
-        return 4 * length; // Perimeter = 4 x side
+        return 4 * length;
     }
 
     public int getArea() {
-        return length * length; // Area = side^2
+        return length * length;
     }
 
 }

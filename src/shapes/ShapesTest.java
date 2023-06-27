@@ -3,11 +3,9 @@ package shapes;
 public class ShapesTest {
 
 
-
-
     public static void main(String[] args) {
 
-        Rectangle box1 = new Rectangle(4,5);
+        Rectangle box1 = new Rectangle(4, 5);
         System.out.println("Area of box1: " + box1.getArea());
         System.out.println("Perimeter of box1: " + box1.getPerimeter());
 
