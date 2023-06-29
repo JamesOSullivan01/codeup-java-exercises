@@ -23,32 +23,51 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-         int num;
+        int num;
         do {
             System.out.println("Enter a number between " + min + " and " + max);
-            num = scanner.nextInt();
+            String input = getString();
+            try {
+                num = Integer.valueOf(input);
+            } catch (NumberFormatException e) {
+                num = Integer.MIN_VALUE;
+            }
         } while (num < min || num > max);
         return num;
     }
 
     public int getInt() {
         System.out.println("Please enter an integer");
-        return this.scanner.nextInt();
+        String input = getString();
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            return Integer.MIN_VALUE;
+        }
     }
 
     public double getDouble(double min, double max) {
         double num;
         do {
             System.out.println("Enter a number between " + min + " and " + max);
-            num = scanner.nextDouble();
+            String input = getString();
+            try {
+                num = Double.valueOf(input);
+            } catch (NumberFormatException e) {
+                num = Double.NaN;
+            }
         } while (num < min || num > max);
         return num;
     }
 
     public double getDouble() {
-        return this.scanner.nextDouble();
+        String input = getString();
+        try {
+            return Double.valueOf(input);
+        } catch (NumberFormatException e) {
+            return Double.NaN;
+        }
     }
-
 
     public static void main(String[] args) {
         Input newInput = new Input();
@@ -57,8 +76,10 @@ public class Input {
         System.out.println(newInput.getDouble(1, 100));
         System.out.println(newInput.getDouble());
 
+        newInput.close();
+    }
 
+    public void close() {
+        scanner.close();
     }
 }
-
-
